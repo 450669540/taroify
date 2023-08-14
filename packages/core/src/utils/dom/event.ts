@@ -35,5 +35,5 @@ export function getClientCoordinates(event: ITouchEvent | MouseEvent): ClientCoo
       clientY,
     }
   }
-  return detail;
+  return touchs[0] || { clientX: detail.x || detail.clientX, clientY: detail.y || detail.clientY };
 }
